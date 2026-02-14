@@ -22,10 +22,11 @@ body{
 
 /* HERO */
 header{
-    background:linear-gradient(rgba(0,0,0,.6),rgba(0,0,0,.6)), url('campo.jpg');
+    background: linear-gradient(rgba(0,0,0,.65),rgba(0,0,0,.65)),
+    url('imagen/agrovet-web.jpg');
     background-size:cover;
     background-position:center;
-    height:90vh;
+    height:95vh;
     display:flex;
     align-items:center;
     justify-content:center;
@@ -37,17 +38,12 @@ header{
 header h1{
     font-size:3.5rem;
     font-weight:700;
-    color:#7ed957;
+    color:#8BC34A;
 }
 
 header p{
     margin-top:15px;
     font-size:1.2rem;
-}
-header {
-    background-image: url('imagen/agrovet-web.jpg');
-    background-size: cover;
-    background-position: center;
 }
 
 .btn{
@@ -67,13 +63,13 @@ header {
 }
 
 section{
-    padding:70px 10%;
+    padding:80px 10%;
 }
 
 .section-title{
     text-align:center;
-    font-size:2.2rem;
-    margin-bottom:40px;
+    font-size:2.3rem;
+    margin-bottom:50px;
     color:#2e7d32;
 }
 
@@ -88,15 +84,18 @@ section{
     width:100%;
     max-width:500px;
     border-radius:15px;
+    box-shadow:0 15px 30px rgba(0,0,0,.1);
 }
 
 .about-text{
     flex:1;
+    font-size:1.05rem;
+    line-height:1.7;
 }
 
 .services{
     display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
     gap:30px;
 }
 
@@ -106,14 +105,26 @@ section{
     border-radius:15px;
     box-shadow:0 10px 25px rgba(0,0,0,.08);
     text-align:center;
+    transition:.3s;
+}
+
+.card:hover{
+    transform:translateY(-8px);
+}
+
+.card h4{
+    margin-bottom:15px;
+    color:#2e7d32;
+    font-size:1.2rem;
 }
 
 .gallery img{
     width:100%;
-    max-width:800px;
+    max-width:900px;
     display:block;
     margin:auto;
     border-radius:15px;
+    box-shadow:0 15px 30px rgba(0,0,0,.15);
 }
 
 .contact{
@@ -125,7 +136,7 @@ footer{
     background:#1b5e20;
     color:white;
     text-align:center;
-    padding:20px;
+    padding:25px;
 }
 
 .whatsapp{
@@ -134,10 +145,11 @@ footer{
     right:25px;
     background:#25d366;
     color:white;
-    padding:16px 20px;
+    padding:16px 22px;
     border-radius:50px;
     text-decoration:none;
     font-weight:bold;
+    box-shadow:0 10px 25px rgba(0,0,0,.2);
 }
 </style>
 </head>
@@ -157,15 +169,20 @@ footer{
 <section>
     <h2 class="section-title">Quiénes Somos</h2>
     <div class="about">
-        <img src="local.jpg" alt="Local Agrovet del Sur">
+        <img src="imagen/agrovet-web.jpg" alt="Agrovet del Sur">
         <div class="about-text">
             <p>
                 Agrovet del Sur es una empresa ubicada en el cantón Sozoranga,
-                provincia de Loja, especializada en insumos agrícolas y veterinarios.
+                provincia de Loja, especializada en la comercialización de insumos agrícolas y veterinarios.
             </p>
             <p>
-                Propietarios: <strong>Ing. Tatiana Quinapallo</strong> y 
+                Propietarios:
+                <strong>Ing. Tatiana Quinapallo</strong> y
                 <strong>Juan Pablo Luzuriaga</strong>.
+            </p>
+            <p>
+                Brindamos asesoría técnica especializada y productos de alta calidad
+                para fortalecer la productividad del sector agropecuario.
             </p>
         </div>
     </div>
@@ -176,36 +193,36 @@ footer{
     <div class="services">
         <div class="card">
             <h4>🌽 Insumos Agrícolas</h4>
-            <p>Semillas, fertilizantes e insecticidas certificados.</p>
+            <p>Semillas certificadas, fertilizantes, herbicidas e insecticidas de alta calidad.</p>
         </div>
 
         <div class="card">
             <h4>🐄 Productos Veterinarios</h4>
-            <p>Vitaminas y suplementos para ganado.</p>
+            <p>Vitaminas, suplementos y medicamentos para ganado y animales de granja.</p>
         </div>
 
         <div class="card">
             <h4>👩‍🌾 Asesoría Técnica</h4>
-            <p>Capacitación y acompañamiento técnico.</p>
+            <p>Capacitaciones y acompañamiento técnico personalizado.</p>
         </div>
     </div>
 </section>
 
 <section>
-    <h2 class="section-title">Eventos y Trabajo en Campo</h2>
+    <h2 class="section-title">Trabajo en Campo</h2>
     <div class="gallery">
-        <img src="evento.jpg" alt="Evento Agrovet del Sur">
+        <img src="imagen/agrovet-web.jpg" alt="Trabajo Agrovet del Sur">
     </div>
 </section>
 
 <section class="contact">
     <h2 class="section-title">Contacto</h2>
-    <p><strong>Ubicación:</strong> Cantón Sozoranga - Loja</p>
+    <p><strong>Ubicación:</strong> Cantón Sozoranga - Provincia de Loja - Ecuador</p>
     <p><strong>WhatsApp:</strong> 0999435014</p>
     <p><strong>Facebook:</strong> Agrovet del Sur</p>
     <br>
     <a href="https://wa.me/593999435014" target="_blank" class="btn">
-        Escribenos Ahora
+        Escríbenos Ahora
     </a>
 </section>
 
