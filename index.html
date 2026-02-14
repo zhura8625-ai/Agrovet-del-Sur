@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Agrovet del Sur | Soluciones Agrícolas y Veterinarias</title>
+<title>Agrovet del Sur | Soluciones Agropecuarias</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 
@@ -18,18 +18,51 @@
 body{
     background:#f4f7f4;
     color:#333;
-    line-height:1.6;
 }
 
+/* NAV */
+nav{
+    position:fixed;
+    width:100%;
+    background:white;
+    padding:15px 8%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    box-shadow:0 5px 15px rgba(0,0,0,.08);
+    z-index:1000;
+}
+
+nav h2{
+    color:#2e7d32;
+}
+
+nav ul{
+    list-style:none;
+    display:flex;
+    gap:25px;
+}
+
+nav a{
+    text-decoration:none;
+    color:#333;
+    font-weight:500;
+}
+
+nav a:hover{
+    color:#2e7d32;
+}
+
+/* HEADER */
 header{
-    background:linear-gradient(rgba(0,0,0,.65),rgba(0,0,0,.65)),
-    url('https://images.unsplash.com/photo-1500595046743-cd271d694d30?auto=format&fit=crop&w=1400&q=80');
+    height:100vh;
+    background:linear-gradient(rgba(0,0,0,.6),rgba(0,0,0,.6)),
+    url('https://images.unsplash.com/photo-1500595046743-cd271d694d30?auto=format&fit=crop&w=1600&q=80');
     background-size:cover;
     background-position:center;
-    height:85vh;
     display:flex;
-    align-items:center;
     justify-content:center;
+    align-items:center;
     text-align:center;
     color:white;
     padding:20px;
@@ -41,13 +74,13 @@ header h1{
 }
 
 header p{
-    margin-top:15px;
+    margin-top:20px;
     font-size:1.2rem;
 }
 
 .btn{
     display:inline-block;
-    margin-top:25px;
+    margin-top:30px;
     padding:14px 30px;
     background:#2e7d32;
     color:white;
@@ -59,55 +92,37 @@ header p{
 
 .btn:hover{
     background:#1b5e20;
+    transform:scale(1.05);
 }
 
 section{
-    padding:70px 10%;
+    padding:90px 10%;
 }
 
 .section-title{
     text-align:center;
     font-size:2.2rem;
-    margin-bottom:40px;
+    margin-bottom:50px;
     color:#2e7d32;
 }
 
-/* Empresa */
+/* SOBRE NOSOTROS */
 .about{
-    display:flex;
-    flex-wrap:wrap;
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
     gap:40px;
     align-items:center;
 }
 
 .about img{
     width:100%;
-    max-width:500px;
     border-radius:15px;
 }
 
-.about-text{
-    flex:1;
-}
-
-/* Mision Vision */
-.mision-vision{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-    gap:30px;
-}
-
-.box{
-    background:white;
-    padding:30px;
-    border-radius:15px;
-    box-shadow:0 8px 20px rgba(0,0,0,.08);
-}
-
-/* Productos */
+/* PRODUCTOS */
 .products{
     display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
     gap:30px;
 }
 
@@ -116,16 +131,16 @@ section{
     border-radius:15px;
     overflow:hidden;
     box-shadow:0 10px 25px rgba(0,0,0,.08);
-    transition:.3s;
+    transition:.4s;
 }
 
 .card:hover{
-    transform:translateY(-5px);
+    transform:translateY(-10px);
 }
 
 .card img{
     width:100%;
-    height:200px;
+    height:220px;
     object-fit:cover;
 }
 
@@ -135,13 +150,50 @@ section{
 
 .card h4{
     color:#2e7d32;
-    margin-bottom:10px;
 }
 
-/* Contacto */
+/* GALERIA */
+.gallery{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:20px;
+}
+
+.gallery img{
+    width:100%;
+    height:200px;
+    object-fit:cover;
+    border-radius:15px;
+    transition:.4s;
+}
+
+.gallery img:hover{
+    transform:scale(1.08);
+}
+
+/* CONTACTO */
 .contact{
-    background:#e8f5e9;
+    background:linear-gradient(rgba(46,125,50,.9),rgba(46,125,50,.9)),
+    url('https://images.unsplash.com/photo-1592982537447-7440770cbfc9?auto=format&fit=crop&w=1400&q=80');
+    background-size:cover;
+    background-position:center;
+    color:white;
     text-align:center;
+    padding:80px 10%;
+}
+
+/* WHATSAPP FLOAT */
+.whatsapp{
+    position:fixed;
+    bottom:20px;
+    right:20px;
+    background:#25D366;
+    color:white;
+    padding:15px 18px;
+    border-radius:50%;
+    font-size:22px;
+    text-decoration:none;
+    box-shadow:0 5px 15px rgba(0,0,0,.3);
 }
 
 footer{
@@ -155,110 +207,93 @@ footer{
 
 <body>
 
+<nav>
+    <h2>Agrovet del Sur</h2>
+    <ul>
+        <li><a href="#">Inicio</a></li>
+        <li><a href="#nosotros">Nosotros</a></li>
+        <li><a href="#productos">Productos</a></li>
+        <li><a href="#galeria">Galería</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+    </ul>
+</nav>
+
 <header>
     <div>
-        <h1>AGROVET DEL SUR</h1>
-        <p>Insumos Agrícolas y Veterinarios en Sozoranga - Loja</p>
-        <a href="https://wa.me/593999435014" target="_blank" class="btn">
-            Contactar por WhatsApp
-        </a>
+        <h1>Soluciones Agrícolas y Veterinarias</h1>
+        <p>Comprometidos con el desarrollo productivo del sur del Ecuador</p>
+        <a href="https://wa.me/593999435014" target="_blank" class="btn">Contactar por WhatsApp</a>
     </div>
 </header>
 
-<section>
+<section id="nosotros">
     <h2 class="section-title">Nuestra Empresa</h2>
     <div class="about">
-        <img src="https://images.unsplash.com/photo-1598514983318-2f64f8f4796c?auto=format&fit=crop&w=800&q=80" alt="Tienda agrícola">
-        <div class="about-text">
-            <p>
-                <strong>Agrovet del Sur</strong> es una empresa ubicada en el cantón Sozoranga,
-                provincia de Loja, especializada en la comercialización de insumos agrícolas
-                y productos veterinarios de alta calidad.
-            </p>
+        <img src="https://images.unsplash.com/photo-1586773860418-d37222d8fce3?auto=format&fit=crop&w=800&q=80">
+        <div>
+            <p><strong>Agrovet del Sur</strong> es una empresa ubicada en Sozoranga - Loja, dedicada a la comercialización de insumos agrícolas y productos veterinarios.</p>
             <br>
-            <p>
-                Propietarios:
-                <strong>Ing. Tatiana Quinapallo</strong> y
-                <strong>Juan Pablo Luzuriaga</strong>.
-            </p>
+            <p><strong>Propietarios:</strong> Ing. Tatiana Quinapallo y Juan Pablo Luzuriaga.</p>
             <br>
-            <p>
-                Brindamos asesoría técnica personalizada, acompañando a agricultores y
-                ganaderos en cada etapa de producción para mejorar el rendimiento y
-                la sostenibilidad de sus cultivos y animales.
-            </p>
+            <p>Brindamos asesoría técnica especializada para agricultores y ganaderos, ofreciendo productos certificados y de alta calidad.</p>
         </div>
     </div>
 </section>
 
-<section>
-    <h2 class="section-title">Misión y Visión</h2>
-    <div class="mision-vision">
-        <div class="box">
-            <h3>Misión</h3>
-            <p>
-                Ofrecer soluciones agrícolas y veterinarias innovadoras y de calidad,
-                proporcionando asesoría técnica profesional que contribuya al desarrollo
-                productivo del sector agropecuario en la región sur del Ecuador.
-            </p>
-        </div>
-        <div class="box">
-            <h3>Visión</h3>
-            <p>
-                Ser la empresa líder en insumos agropecuarios en la provincia de Loja,
-                reconocida por su compromiso, excelencia en el servicio y aporte al
-                crecimiento sostenible del sector agrícola y ganadero.
-            </p>
-        </div>
-    </div>
-</section>
-
-<section>
+<section id="productos">
     <h2 class="section-title">Nuestros Productos</h2>
     <div class="products">
 
         <div class="card">
-            <img src="https://images.unsplash.com/photo-1625246333195-78d9c38ad449?auto=format&fit=crop&w=800&q=80" alt="Herbicida Glifosato">
+            <img src="https://images.unsplash.com/photo-1625246333195-78d9c38ad449?auto=format&fit=crop&w=800&q=80">
             <div class="card-content">
                 <h4>Glyfocor Killer (Glifosato)</h4>
-                <p>Herbicida sistémico de amplio espectro para el control efectivo de malezas en cultivos y pastizales.</p>
+                <p>Herbicida sistémico de amplio espectro.</p>
             </div>
         </div>
 
         <div class="card">
-            <img src="https://images.unsplash.com/photo-1501004318641-b39e6451bec6?auto=format&fit=crop&w=800&q=80" alt="Fertilizantes">
+            <img src="https://images.unsplash.com/photo-1501004318641-b39e6451bec6?auto=format&fit=crop&w=800&q=80">
             <div class="card-content">
-                <h4>Fertilizantes Agrícolas</h4>
-                <p>Fórmulas balanceadas que mejoran la nutrición vegetal y aumentan el rendimiento productivo.</p>
+                <h4>Fertilizantes</h4>
+                <p>Nutrición balanceada para cultivos.</p>
             </div>
         </div>
 
         <div class="card">
-            <img src="https://images.unsplash.com/photo-1602526219040-4f1b12b4f10d?auto=format&fit=crop&w=800&q=80" alt="Productos Veterinarios">
+            <img src="https://images.unsplash.com/photo-1602526219040-4f1b12b4f10d?auto=format&fit=crop&w=800&q=80">
             <div class="card-content">
-                <h4>Vitaminas y Suplementos Veterinarios</h4>
-                <p>Productos especializados para fortalecer la salud y productividad del ganado.</p>
+                <h4>Vitaminas Veterinarias</h4>
+                <p>Mejora la salud y productividad animal.</p>
             </div>
         </div>
 
     </div>
 </section>
 
-<section class="contact">
-    <h2 class="section-title">Contacto</h2>
-    <p><strong>Ubicación:</strong> Cantón Sozoranga - Loja, Ecuador</p>
-    <p><strong>WhatsApp:</strong> 0999435014</p>
-    <p><strong>Facebook:</strong> Agrovet del Sur</p>
-    <br>
-    <a href="https://wa.me/593999435014" target="_blank" class="btn">
-        Escríbenos Ahora
-    </a>
+<section id="galeria">
+    <h2 class="section-title">Galería Agropecuaria</h2>
+    <div class="gallery">
+        <img src="https://images.unsplash.com/photo-1500595046743-cd271d694d30?auto=format&fit=crop&w=800&q=80">
+        <img src="https://images.unsplash.com/photo-1589927986089-35812388d1f4?auto=format&fit=crop&w=800&q=80">
+        <img src="https://images.unsplash.com/photo-1598514983318-2f64f8f4796c?auto=format&fit=crop&w=800&q=80">
+        <img src="https://images.unsplash.com/photo-1592982537447-7440770cbfc9?auto=format&fit=crop&w=800&q=80">
+    </div>
 </section>
 
+<section id="contacto" class="contact">
+    <h2>Contáctanos</h2>
+    <p>📍 Sozoranga - Loja, Ecuador</p>
+    <p>📱 0999435014</p>
+    <br>
+    <a href="https://wa.me/593999435014" target="_blank" class="btn">Escríbenos Ahora</a>
+</section>
+
+<a href="https://wa.me/593999435014" class="whatsapp" target="_blank">💬</a>
+
 <footer>
-    <p>© 2026 Agrovet del Sur - Todos los derechos reservados</p>
+    © 2026 Agrovet del Sur | Todos los derechos reservados
 </footer>
 
 </body>
 </html>
-
