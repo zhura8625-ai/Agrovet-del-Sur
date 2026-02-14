@@ -8,231 +8,220 @@
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 
 <style>
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family:'Poppins', sans-serif;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
 }
 
-body{
-    background:#f4f7f4;
-    color:#333;
+body {
+    background: #f8f9f9;
+    color: #333;
 }
 
-/* HERO */
-header{
-    background: linear-gradient(rgba(0,0,0,.65),rgba(0,0,0,.65)),
-    url('imagen/agrovet-web.jpg');
-    background-size:cover;
-    background-position:center;
-    height:95vh;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    text-align:center;
-    color:white;
-    padding:20px;
+/* Cabecera */
+header {
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+      url('https://cdn.pixabay.com/photo/2017/01/20/15/06/solar-system-1995256_1280.jpg') center/cover no-repeat;
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    padding: 20px;
 }
 
-header h1{
-    font-size:3.5rem;
-    font-weight:700;
-    color:#8BC34A;
+header h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 15px;
 }
 
-header p{
-    margin-top:15px;
-    font-size:1.2rem;
+header p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
 }
 
-.btn{
-    display:inline-block;
-    margin-top:25px;
-    padding:14px 35px;
-    background:#2e7d32;
-    color:white;
-    text-decoration:none;
-    border-radius:40px;
-    font-weight:600;
-    transition:0.3s;
+.btn-primary {
+    background: #28a745;
+    color: white;
+    padding: 12px 25px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: 0.3s ease;
 }
 
-.btn:hover{
-    background:#1b5e20;
+.btn-primary:hover {
+    background: #1e7e34;
 }
 
-section{
-    padding:80px 10%;
+/* Secciones */
+section {
+    padding: 60px 10%;
 }
 
-.section-title{
-    text-align:center;
-    font-size:2.3rem;
-    margin-bottom:50px;
-    color:#2e7d32;
+.section-title {
+    text-align: center;
+    font-size: 2.3rem;
+    color: #28a745;
+    margin-bottom: 40px;
 }
 
-.about{
-    display:flex;
-    flex-wrap:wrap;
-    gap:40px;
-    align-items:center;
+/* Misión-Vision */
+.mision-vis {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+}
+.mision-vis .box {
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    width: 100%;
+    max-width: 500px;
 }
 
-.about img{
-    width:100%;
-    max-width:500px;
-    border-radius:15px;
-    box-shadow:0 15px 30px rgba(0,0,0,.1);
+/* Productos */
+.products {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px,1fr));
+    gap: 30px;
+}
+.product-card {
+    background: white;
+    padding: 18px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    text-align: center;
+}
+.product-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+.product-card h4 {
+    margin-top: 12px;
+    color: #28a745;
+    font-size: 1.2rem;
+}
+.product-card p {
+    font-size: .95rem;
+    margin: 8px 0;
 }
 
-.about-text{
-    flex:1;
-    font-size:1.05rem;
-    line-height:1.7;
+/* Contacto */
+.contact-info p {
+    margin: 8px 0;
+    font-size: 1rem;
+}
+.contact-info a {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 12px 22px;
+    background: #28a745;
+    color: white;
+    text-decoration: none;
+    border-radius: 30px;
+    font-weight: bold;
 }
 
-.services{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-    gap:30px;
-}
-
-.card{
-    background:white;
-    padding:30px;
-    border-radius:15px;
-    box-shadow:0 10px 25px rgba(0,0,0,.08);
-    text-align:center;
-    transition:.3s;
-}
-
-.card:hover{
-    transform:translateY(-8px);
-}
-
-.card h4{
-    margin-bottom:15px;
-    color:#2e7d32;
-    font-size:1.2rem;
-}
-
-.gallery img{
-    width:100%;
-    max-width:900px;
-    display:block;
-    margin:auto;
-    border-radius:15px;
-    box-shadow:0 15px 30px rgba(0,0,0,.15);
-}
-
-.contact{
-    background:#e8f5e9;
-    text-align:center;
-}
-
-footer{
-    background:#1b5e20;
-    color:white;
-    text-align:center;
-    padding:25px;
-}
-
-.whatsapp{
-    position:fixed;
-    bottom:25px;
-    right:25px;
-    background:#25d366;
-    color:white;
-    padding:16px 22px;
-    border-radius:50px;
-    text-decoration:none;
-    font-weight:bold;
-    box-shadow:0 10px 25px rgba(0,0,0,.2);
+/* Footer */
+footer {
+    background: #1b5e20;
+    color: white;
+    text-align: center;
+    padding: 15px;
 }
 </style>
-</head>
 
+</head>
 <body>
 
+<!-- Sección Principal -->
 <header>
     <div>
-        <h1>AGROVET DEL SUR</h1>
-        <p>Insumos Agrícolas y Veterinarios en Sozoranga - Loja</p>
-        <a href="https://wa.me/593999435014" target="_blank" class="btn">
-            Contactar por WhatsApp
-        </a>
+        <h1>Agrovet del Sur</h1>
+        <p>Soluciones integrales en insumos agrícolas y veterinarios</p>
+        <a href="https://wa.me/593999435014" class="btn-primary" target="_blank">💬 Contáctanos por WhatsApp</a>
     </div>
 </header>
 
+<!-- Misión & Visión -->
 <section>
-    <h2 class="section-title">Quiénes Somos</h2>
-    <div class="about">
-        <img src="imagen/agrovet-web.jpg" alt="Agrovet del Sur">
-        <div class="about-text">
+    <h2 class="section-title">Nuestra Misión y Visión</h2>
+    <div class="mision-vis">
+        <div class="box">
+            <h3>Misión</h3>
             <p>
-                Agrovet del Sur es una empresa ubicada en el cantón Sozoranga,
-                provincia de Loja, especializada en la comercialización de insumos agrícolas y veterinarios.
+                Brindar insumos agrícolas y veterinarios de la más alta calidad,
+                acompañados de asesoría técnica profesional, para potenciar la productividad
+                de agricultores y productores ganaderos en Sozoranga y toda la provincia de Loja.
             </p>
+        </div>
+        <div class="box">
+            <h3>Visión</h3>
             <p>
-                Propietarios:
-                <strong>Ing. Tatiana Quinapallo</strong> y
-                <strong>Juan Pablo Luzuriaga</strong>.
-            </p>
-            <p>
-                Brindamos asesoría técnica especializada y productos de alta calidad
-                para fortalecer la productividad del sector agropecuario.
+                Ser reconocidos como la tienda agropecuaria líder en la región,
+                ofreciendo soluciones integrales que impulsen el crecimiento sostenible
+                y la productividad de nuestros clientes.
             </p>
         </div>
     </div>
 </section>
 
+<!-- Productos Destacados -->
 <section>
-    <h2 class="section-title">Nuestros Servicios</h2>
-    <div class="services">
-        <div class="card">
-            <h4>🌽 Insumos Agrícolas</h4>
-            <p>Semillas certificadas, fertilizantes, herbicidas e insecticidas de alta calidad.</p>
+    <h2 class="section-title">Nuestros Productos</h2>
+    <div class="products">
+
+        <!-- Producto 1: Herbicida Glifosato -->
+        <div class="product-card">
+            <img src="https://cdn.pixabay.com/photo/2019/05/08/22/09/herbicide-4182571_1280.jpg" alt="Herbicida Glifosato">
+            <h4>Herbicida Glifosato</h4>
+            <p>Herbicida de amplio espectro para control de malezas y arbustos.</p>
+            <p>Perfecto para cultivos y pastizales.</p>
         </div>
 
-        <div class="card">
-            <h4>🐄 Productos Veterinarios</h4>
-            <p>Vitaminas, suplementos y medicamentos para ganado y animales de granja.</p>
+        <!-- Producto 2: Fertilizante Agrícola -->
+        <div class="product-card">
+            <img src="https://cdn.pixabay.com/photo/2018/03/14/14/46/greenhouse-3225554_1280.jpg" alt="Fertilizante Agrícola">
+            <h4>Fertilizante Agrícola</h4>
+            <p>Mejora la nutrición de tus cultivos y aumenta rendimiento.</p>
+            <p>Alta eficiencia y resultados comprobados.</p>
         </div>
 
-        <div class="card">
-            <h4>👩‍🌾 Asesoría Técnica</h4>
-            <p>Capacitaciones y acompañamiento técnico personalizado.</p>
+        <!-- Producto 3: Suplemento Veterinario -->
+        <div class="product-card">
+            <img src="https://cdn.pixabay.com/photo/2017/08/19/19/06/cow-2658883_1280.jpg" alt="Suplemento Veterinario">
+            <h4>Suplemento Veterinario</h4>
+            <p>Vitaminas y minerales para fortalecer la salud animal.</p>
+            <p>Ideal para ganado y pequeñas mascotas.</p>
         </div>
+
     </div>
 </section>
 
+<!-- Información de Contacto -->
 <section>
-    <h2 class="section-title">Trabajo en Campo</h2>
-    <div class="gallery">
-        <img src="imagen/agrovet-web.jpg" alt="Trabajo Agrovet del Sur">
-    </div>
-</section>
-
-<section class="contact">
     <h2 class="section-title">Contacto</h2>
-    <p><strong>Ubicación:</strong> Cantón Sozoranga - Provincia de Loja - Ecuador</p>
-    <p><strong>WhatsApp:</strong> 0999435014</p>
-    <p><strong>Facebook:</strong> Agrovet del Sur</p>
-    <br>
-    <a href="https://wa.me/593999435014" target="_blank" class="btn">
-        Escríbenos Ahora
-    </a>
+    <div class="contact-info">
+        <p><strong>📍 Ubicación:</strong> Cantón Sozoranga, Provincia de Loja, Ecuador</p>
+        <p><strong>📞 WhatsApp:</strong> 0999435014</p>
+        <p><strong>📘 Facebook:</strong> Agrovet del Sur</p>
+        <a href="https://wa.me/593999435014" target="_blank">💬 Escríbenos Ahora</a>
+    </div>
 </section>
 
+<!-- Footer -->
 <footer>
-    <p>© 2026 Agrovet del Sur - Todos los derechos reservados</p>
+    © 2026 Agrovet del Sur — Todos los derechos reservados
 </footer>
-
-<a href="https://wa.me/593999435014" class="whatsapp" target="_blank">
-💬 WhatsApp
-</a>
 
 </body>
 </html>
